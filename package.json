@@ -42,6 +42,7 @@
     "eslint-plugin-react": "^7.11.1",
     "gulp-react-docs": "^0.1.2",
     "lodash-webpack-plugin": "^0.10.2",
+    "react": "^15.6.2",
     "release-script": "^1.0.2",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
