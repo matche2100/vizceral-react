@@ -8,7 +8,7 @@
     "doc": "./docs.js ./src/vizceral.jsx",
     "lint": "eslint src --ext .js --ext .jsx --fix",
     "copy:css": "cpx ./src/vizceral.css ./dist",
-    "postinstall": "npm run build",
+    "postinstall": "npm install && npm run build",
     "release": "release"
   },
   "license": "Apache-2.0",
