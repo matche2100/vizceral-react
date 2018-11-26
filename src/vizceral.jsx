@@ -72,6 +72,8 @@ class Vizceral extends React.Component {
       showLabels: this.props.showLabels
     });
 
+    this.vizceral.setPostPositionURL(this.props.postPositionURL);
+
 
     if (!isEqual(this.props.filters, Vizceral.defaultProps.filters)) {
       this.vizceral.setFilters(this.props.filters);
@@ -224,7 +226,11 @@ Vizceral.propTypes = {
   /**
   * Target framerate for rendering engine
   */
-  targetFramerate: PropTypes.number
+  targetFramerate: PropTypes.number,
+  /**
+  *  URL to Post method. when The Node draggin and move, and then send position data
+  */
+  postPositionURL: PropTypes.string
 };
 
 Vizceral.defaultProps = {
@@ -241,6 +247,7 @@ Vizceral.defaultProps = {
   objectToHighlight: null,
   showLabels: true,
   allowDraggingOfNodes: false,
+  postPositionURL: "",
   styles: {},
   traffic: {},
   viewChanged: () => {},

@@ -9,6 +9,12 @@ const options = yargs
 
 const config = {
   entry: './src/vizceral.jsx',
+  mode: process.env.NODE_ENV || 'development',
+  performance: {
+        maxEntrypointSize: 512000,
+        maxAssetSize:      512000,
+        hints: process.env.NODE_ENV === 'production' ? "warning" : false
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: options.optimizeMinimize ? 'vizceral.min.js' : 'vizceral.js',
